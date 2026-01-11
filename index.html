@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Ajay Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: black;
+        }
+
+        /* ===== LAYOUT ===== */
+        .wrapper {
+            max-width: 1150px;
+            margin: 40px auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* ===== SIDEBAR ===== */
+        .sidebar {
+            width: 300px;
+            background: #111;
+            border: 1px solid rgb(128, 128, 128);
+            color: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .sidebar img {
+            width: 130px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+@media (max-width: 768px) {
+
+  .wrapper {
+    flex-direction: column;   /* left upar, right niche */
+    margin: 15px;
+  }
+
+  .sidebar {
+    width: 100%;              /* full width */
+  }
+  @media (max-width: 768px) {
+
+    .contact input,
+    .contact textarea,
+    .contact select {
+        width: 100%;      /* full width on phone */
+        font-size: 16px;
+    }
+    .contact form {
+    max-width: 500px;
+}
+
+
+    .contact form {
+        text-align: left;
+    }
+
+}
+
+
+  .main {
+    width: 100%;
+    padding: 20px;
+  }
+
+}
+
+        .sidebar h2 {
+            font-size: 22px;
+        }
+
+        .sidebar p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .sidebar hr {
+            border: 0.5px solid #333;
+            margin: 20px 0;
+        }
+
+        .sidebar .info {
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* ===== MAIN CARD ===== */
+        .main {
+            flex: 1;
+            background: #111;
+            border: 1px solid rgb(128, 128, 128);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        /* ===== TABS ===== */
+        .tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            border: none;
+            background: #eee;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tabs button.active {
+            background: #ff4d4d;
+            color: #fff;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .section h3 {
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills span {
+            display: inline-block;
+            background: #eee;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* ===== PROJECTS ===== */
+        .project {
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact input,
+        .contact textarea {
+            width: 50%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+        }
+
+        .contact button {
+            background: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        ul {
+            color: #555;
+        }
+
+        p.ab {
+            color: whitesmoke;
+        }
+        h2,label{
+            color: #555;
+        }
+        .a {
+            color: white;
+        }
+        /* ===== CONTACT FORM FIX ===== */
+.contact form {
+    max-width: 500px;
+}
+
+.contact input,
+.contact textarea,
+.contact select {
+    width: 50%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 768px) {
+    .contact input,
+    .contact textarea,
+    .contact select {
+        width: 100%;      /* FULL WIDTH ON PHONE */
+        font-size: 16px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar">
+            <img src="ajay.jpeg" alt="profile">
+            <h2 class="a">Ajay Vishwakarma</h2>
+            <p>Mechanical Engineer</p>
+
+            <hr>
+
+            <div class="info">
+                📧 vishwakarmaajay12059@gmail.com<br>
+                📱 +91 7021451255 <br>
+                📍 Al Dhaid, Sharjah, UAE
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main">
+
+            <!-- TABS -->
+            <div class="tabs">
+                <button class="active" onclick="openTab('home',this)">Home</button>
+                <button onclick="openTab('about',this)">About</button>
+                <button onclick="openTab('service',this)">Service</button>
+                <button onclick="openTab('skills',this)">Skills</button>
+                <button onclick="openTab('projects',this)">Projects</button>
+                <button onclick="openTab('contact',this)">Contact</button>
+            </div>
+
+            <!-- ABOUT -->
+            <section id="home" class="section active">
+                <h3>Home</h3>
+                <p>Hi, I’m <b> Ajay Vishwakarma </b>, a Mechanical Estimation & Costing Engineer with over 6 years of
+                    experience in the glass processing and façade industry. I support businesses through accurate
+                    estimation, cost optimisation, and technical coordination. Along with engineering services, I also
+                    provide digital marketing, SEO, and design support to help businesses grow professionally.</p>
+
+            </section>
+
+            <!-- RESUME -->
+            <section id="about" class="section">
+                <h3>About</h3>
+                <p>I am a B.Tech Mechanical Engineer specialising in estimation, costing, quotation development,
+                    technical pre-sales, and project execution. My experience includes BOQ preparation, cost analysis,
+                    client coordination, and inventory control within glass and façade projects. In addition, I have
+                    hands-on experience in digital marketing, SEO optimisation, and graphic design, allowing me to offer
+                    both technical and digital solutions.</p>
+            </section>
+
+            <!-- SERVICES -->
+            <section id="service" class="section">
+                <h3>Service</h3>
+                <p class="ab">Engineering Services:</p>
+                <ul>
+                    <li>BOQ preparation and detailed cost estimation</li>
+                    <li>Rate analysis and profit margin optimisation</li>
+                    <li>Quotation and tender document preparation</li>
+                    <li>Glass processing and façade system costing</li>
+                    <li>Project execution and inventory support</li>
+
+                </ul>
+                <p class="ab">Digital Marketing & Design Services:</p>
+                <ul>
+                    <li>Basic to intermediate SEO and keyword optimisation</li>
+                    <li>Website content structuring and optimisation</li>
+                    <li>Logo and branding design using Canva</li>
+                    <li>Social media post and marketing creative design</li>
+                    <li>Business profiles, brochures, and presentations</li>
+                </ul>
+            </section>
+
+            <!-- SKILLS -->
+            <section id="skills" class="section skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Estimation & Costing, BOQ, AutoCAD</li>
+                    <li>Glass & Façade Systems Knowledge</li>
+                    <li>ERP Systems, Power BI (Basic-Intermediate)</li>
+                    <li>MS Excel (Advanced), Word, PowerPoint</li>
+                    <li>SEO, Digital Marketing Fundamentals</li>
+                    <li>Canva Design, Logo & Branding, Content Writing</li>
+
+                </ul>
+            </section>
+
+            <!-- PROJECTS -->
+            <section id="projects" class="section">
+                <h3>Projects</h3>
+                <p>Engineering projects include cost estimation and quotation development for commercial glass
+                    projects. Digital work includes logo design, social media creatives, and website content
+                    structuring.
+                </p>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="section contact">
+                <h3>Contact </h3>
+                <form action="#" onsubmit="sendWhatsApp(); return false;" class="a">
+                    <h2>Service Request</h2>
+
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter Your Full Name" required><br><br>
+
+                    <label>WhatsApp Number</label>
+                    <input type="tel" required placeholder="10 digit number"><br><br>
+
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="example@gmail.com"><br><br>
+
+                    <label>Service Required</label>
+                    <select required>
+                        <option value="">Select Service</option>
+                        <option>Website Design</option>
+                        <option>App Development</option>
+                        <option>Digital Marketing</option>
+                    </select><br><br>
+
+                    <label>Message</label>
+                    <textarea rows="1" required></textarea><br><br>
+
+                    <button type="submit">Send Request</button>
+
+                </form>
+            </section>
+
+        </main>
+    </div>
+    <script>
+        function showMessage() {
+            alert("Your Information Submited");
+        }
+    </script>
+
+    <script>
+        function openTab(id, btn) {
+            document.querySelectorAll(".section").forEach(sec => {
+                sec.classList.remove("active");
+            });
+            document.getElementById(id).classList.add("active");
+
+            document.querySelectorAll(".tabs button").forEach(b => {
+                b.classList.remove("active");
+            });
+            btn.classList.add("active");
+        }
+    </script>
+<script>
+function sendWhatsApp() {
+
+    let name = document.querySelector("input[type=text]").value;
+    let phone = document.querySelector("input[type=tel]").value;
+    let email = document.querySelector("input[type=email]").value;
+    let service = document.querySelector("select").value;
+    let message = document.querySelector("textarea").value;
+
+    let whatsappNumber = "917021451255"; // apna number (91 ke sath)
+
+    let text =
+        "Service Request%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Email: " + email + "%0A" +
+        "Service: " + service + "%0A" +
+        "Message: " + message;
+
+    let url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+    window.open(url, "_blank");
+}
+</script>
+
+</body>
+
+</html>
