@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title> Ajay Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <style>
         * {
@@ -15,7 +17,7 @@
         }
 
         body {
-            background: black;
+            background: white;
         }
 
         /* ===== LAYOUT ===== */
@@ -29,62 +31,71 @@
         /* ===== SIDEBAR ===== */
         .sidebar {
             width: 300px;
-            background: #111;
+            background: #fff;
             border: 1px solid rgb(128, 128, 128);
-            color: #fff;
+            color: black;
             border-radius: 20px;
             padding: 25px;
             text-align: center;
         }
 
         .sidebar img {
-            width: 130px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 50%;
             margin-bottom: 15px;
         }
-@media (max-width: 768px) {
 
-  .wrapper {
-    flex-direction: column;   /* left upar, right niche */
-    margin: 15px;
-  }
+        @media (max-width: 768px) {
 
-  .sidebar {
-    width: 100%;              /* full width */
-  }
-  @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                /* left upar, right niche */
+                margin: 15px;
+            }
 
-    .contact input,
-    .contact textarea,
-    .contact select {
-        width: 100%;      /* full width on phone */
-        font-size: 16px;
-    }
-    .contact form {
-    max-width: 500px;
-}
+            .sidebar {
+                width: 100%;
+                /* full width */
+            }
+
+            @media (max-width: 768px) {
+
+                .contact input,
+                .contact textarea,
+                .contact select {
+                    width: 100%;
+                    /* full width on phone */
+                    font-size: 16px;
+                }
+
+                .contact form {
+                    max-width: 500px;
+                }
 
 
-    .contact form {
-        text-align: left;
-    }
+                .contact form {
+                    text-align: left;
+                }
 
-}
+            }
 
 
-  .main {
-    width: 100%;
-    padding: 20px;
-  }
+            .main {
+                width: 100%;
+                padding: 20px;
+            }
 
-}
+        }
 
         .sidebar h2 {
             font-size: 22px;
+            color: black;
         }
 
         .sidebar p {
-            color: #aaa;
+            color: #363636;
             font-size: 14px;
         }
 
@@ -102,7 +113,7 @@
         /* ===== MAIN CARD ===== */
         .main {
             flex: 1;
-            background: #111;
+            background: white;
             border: 1px solid rgb(128, 128, 128);
             border-radius: 20px;
             padding: 30px;
@@ -177,7 +188,7 @@
 
         .contact button {
             background: #ff4d4d;
-            color: #fff;
+            color: black;
             border: none;
             padding: 10px 25px;
             border-radius: 25px;
@@ -185,7 +196,7 @@
         }
 
         h3 {
-            color: white;
+            color: black;
         }
 
         ul {
@@ -193,39 +204,44 @@
         }
 
         p.ab {
-            color: whitesmoke;
+            color:black ;
         }
-        h2,label{
+
+        h2,
+        label {
             color: #555;
         }
+
         .a {
             color: white;
         }
+
         /* ===== CONTACT FORM FIX ===== */
-.contact form {
-    max-width: 500px;
-}
+        .contact form {
+            max-width: 500px;
+        }
 
-.contact input,
-.contact textarea,
-.contact select {
-    width: 50%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+        .contact input,
+        .contact textarea,
+        .contact select {
+            width: 50%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
-/* ===== MOBILE ONLY ===== */
-@media (max-width: 768px) {
-    .contact input,
-    .contact textarea,
-    .contact select {
-        width: 100%;      /* FULL WIDTH ON PHONE */
-        font-size: 16px;
-    }
-}
+        /* ===== MOBILE ONLY ===== */
+        @media (max-width: 768px) {
 
+            .contact input,
+            .contact textarea,
+            .contact select {
+                width: 100%;
+                /* FULL WIDTH ON PHONE */
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
@@ -242,9 +258,9 @@
             <hr>
 
             <div class="info">
-                📧 vishwakarmaajay12059@gmail.com<br>
-                📱 +91 7021451255 <br>
-                📍 Al Dhaid, Sharjah, UAE
+                    <i class="fa-solid fa-envelope"></i> vishwakarmaajay12059@gmail.com<br>
+                    <i class="fa-solid fa-phone"></i> +971 56 303 4978 <br>
+                    <i class="fa-solid fa-location-dot"></i> Al Dhaid, Sharjah, UAE
             </div>
         </aside>
 
@@ -378,30 +394,30 @@
             btn.classList.add("active");
         }
     </script>
-<script>
-function sendWhatsApp() {
+    <script>
+        function sendWhatsApp() {
 
-    let name = document.querySelector("input[type=text]").value;
-    let phone = document.querySelector("input[type=tel]").value;
-    let email = document.querySelector("input[type=email]").value;
-    let service = document.querySelector("select").value;
-    let message = document.querySelector("textarea").value;
+            let name = document.querySelector("input[type=text]").value;
+            let phone = document.querySelector("input[type=tel]").value;
+            let email = document.querySelector("input[type=email]").value;
+            let service = document.querySelector("select").value;
+            let message = document.querySelector("textarea").value;
 
-    let whatsappNumber = "917021451255"; // apna number (91 ke sath)
+            let whatsappNumber = "971 56 303 4978"; // apna number (91 ke sath)
 
-    let text =
-        "Service Request%0A" +
-        "Name: " + name + "%0A" +
-        "Phone: " + phone + "%0A" +
-        "Email: " + email + "%0A" +
-        "Service: " + service + "%0A" +
-        "Message: " + message;
+            let text =
+                "Service Request%0A" +
+                "Name: " + name + "%0A" +
+                "Phone: " + phone + "%0A" +
+                "Email: " + email + "%0A" +
+                "Service: " + service + "%0A" +
+                "Message: " + message;
 
-    let url = "https://wa.me/" + whatsappNumber + "?text=" + text;
+            let url = "https://wa.me/" + whatsappNumber + "?text=" + text;
 
-    window.open(url, "_blank");
-}
-</script>
+            window.open(url, "_blank");
+        }
+    </script>
 
 </body>
 
